@@ -1,0 +1,21 @@
+{
+  "name": "ai-eval-framework",
+  "version": "1.0.0",
+  "description": "QA Framework for validating AI-generated responses using semantic evaluation",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage --verbose",
+    "test:evals": "node evals/run_evals.js",
+    "test:all": "npm test && npm run test:evals"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.20.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": ["**/tests/**/*.test.js"]
+  }
+}
